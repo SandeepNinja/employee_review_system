@@ -1,0 +1,35 @@
+.empOuterDiv {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  /* background-color: greenyellow; */
+}
+.empInnerDiv {
+  background-color: red;
+  margin: 20px;
+  /* text-align: center; */
+  padding: 30px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.editOn {
+  display: none;
+}

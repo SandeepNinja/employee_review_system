@@ -1,0 +1,49 @@
+.HomeOuterContainer {
+  display: flex;
+  justify-content: center;
+
+  /* height: calc(100vh - 70px); */
+  /* background-color: greenyellow; */
+  flex-wrap: wrap;
+}
+
+.homeInnerContainer {
+  background-color: red;
+  width: 300px;
+  margin: 20px;
+  min-height: 300px;
+  /* text-align: center; */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.homeHeading {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+.pendingOuterDiv {
+  margin: 10px 0px;
+  border-bottom: 1px solid darkgray;
+  padding: 5px 0px;
+}
+
+.pendingLabel {
+  display: block;
+  padding-bottom: 10px;
+}
+
+textarea {
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+}
+.submitBtn {
+  padding: 5px;
+  border-radius: 10px;
+  width: 80px;
+}

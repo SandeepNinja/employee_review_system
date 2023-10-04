@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/assignStyle.css" />
+
+<div class="assignOuterContainer">
+  <div class="assignInnerContainer">
+    <div class="assignHeading">Assign Review</div>
+    <div class="assignContent">
+      <form action="/assign_review" method="post">
+        <div class="assignReviewer">
+          <label for="reviewer-id">Reviewer</label>
+          <select name="reviewer_id" id="reviewer-id">
+            <% for(employee of Employee){ %>
+            <option value="<%= employee.id %>"><%= employee.name %></option>
+            <%} %>
+            <option value=""></option>
+          </select>
+        </div>
+        <div class="assignReceipient">
+          <label for="recipient-id">Recipient</label>
+          <select name="recipient_id" id="recipient-id">
+            <% for(employee of Employee){ %>
+            <option value="<%= employee.id %>"><%= employee.name %></option>
+            <%} %>
+            <option value=""></option>
+          </select>
+        </div>
+        <div class="assignBtn">
+          <button type="submit">Assign Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

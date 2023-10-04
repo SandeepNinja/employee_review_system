@@ -1,0 +1,98 @@
+* {
+  margin: 0px;
+  border: 0px;
+}
+body {
+  background-color: #98c1d9;
+}
+
+nav {
+  background-color: rgb(74, 74, 240);
+  height: 70px;
+  font-size: 50px;
+}
+
+.commonOuterContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 70px);
+}
+.commonInnerContainer {
+  background-color: red;
+  width: 50vw;
+  /* text-align: center; */
+  padding: 30px;
+  border-radius: 10px;
+}
+.heading {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+  font-weight: bolder;
+  font-size: 30px;
+}
+/* .content {
+  padding-top: 20px;
+} */
+
+.content div {
+  border-bottom: 1px solid darkgrey;
+}
+
+.content div label {
+  display: inline-block;
+  width: 25vw;
+  /* padding: 10px 0px; */
+  /* background-color: yellow; */
+}
+
+.content div input {
+  width: calc(100% - 25vw - 8px);
+  padding: 8px;
+  margin: 10px 0px;
+  border-radius: 8px;
+}
+
+select {
+  width: calc(100% - 25vw - 8px);
+  padding: 8px;
+  margin: 10px 0px;
+  border-radius: 8px;
+}
+
+.btnAndSignIn_up {
+  /* height: 30px; */
+}
+
+.btnAndSignIn_up {
+  text-align: center;
+}
+.submitBTN {
+  margin: 10px;
+  padding: 10;
+  border-radius: 10px;
+  width: 100px;
+}
+.signIn_up {
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 520px) {
+  .commonInnerContainer {
+    width: 70vw;
+  }
+
+  .content div label {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .content div input {
+    width: calc(100% - 4px);
+  }
+  select {
+    width: calc(100% - 4px);
+  }
+}

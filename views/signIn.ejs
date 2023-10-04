@@ -1,0 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/common.css" />
+
+<div class="commonOuterContainer">
+  <div class="commonInnerContainer">
+    <div class="heading">Sign-In</div>
+    <form action="/login" method="post" class="content">
+      <div>
+        <label for="signIn_email">Email</label>
+        <input id="signIn_email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="signIn_password">Password</label>
+        <input id="signIn_password" name="password" type="password" required />
+      </div>
+
+      <div class="btnAndSignIn_up">
+        <button class="submitBTN" type="submit">Submit</button>
+        <span class="signIn_up"
+          >Click here to <a href="/signup">Sign-Up</a></span
+        >
+      </div>
+    </form>
+  </div>
+</div>

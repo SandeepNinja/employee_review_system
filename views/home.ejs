@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../css/home.css" />
+
+<div class="HomeOuterContainer">
+  <div class="homeInnerContainer">
+    <div class="homeHeading">Assigned Reviews</div>
+    <div class="homeContent">
+      <% for(p of pendingData){ %>
+      <form action="/addContentInReview/<%= p.id %>" method="post">
+        <div class="pendingOuterDiv">
+          <label class="pendingLabel" for="content"
+            >To: <%= p.recipient_id.name %></label
+          >
+          <textarea name="content" id="content"></textarea>
+          <button class="submitBtn" type="submit">Submit</button>
+        </div>
+      </form>
+      <% } %>
+    </div>
+  </div>
+  <div class="homeInnerContainer">
+    <div class="homeHeading">My Reviews</div>
+    <div class="homeContent">
+      <% for(p of myData){ %>
+      <div class="pendingOuterDiv">
+        <span class="pendingLabel" for="content"
+          >From: <%= p.reviewer_id.name %></span
+        >
+        <div>Review: <%= p.content%></div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+  <div class="homeInnerContainer">
+    <div class="homeHeading">Old Reviews</div>
+    <div class="homeContent">
+      <% for(p of oldData){ %>
+      <div class="pendingOuterDiv">
+        <span class="pendingLabel" for="content"
+          >To: <%= p.recipient_id.name %></span
+        >
+        <div>Review: <%= p.content%></div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>

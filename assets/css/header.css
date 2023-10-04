@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 0px 25px;
+  align-items: center;
+}
+
+.navRight {
+  display: flex;
+}
+.navRight div {
+  padding: 0px 10px;
+}
+
+.navRight div a {
+  color: black;
+  text-decoration: none;
+}
+#menu {
+  display: none;
+}
+
+@media screen and (max-width: 520px) {
+  #menu {
+    display: block;
+  }
+  .navRight {
+    display: none;
+  }
+
+  .navRight div {
+    border-bottom: 1px solid darkgrey;
+  }
+
+  #menuController:hover .navRight {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    z-index: 1;
+    text-align: center;
+    background: white;
+    right: 0px;
+    width: 100vw;
+    border-bottom: 1px solid darkgrey;
+  }
+}

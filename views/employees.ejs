@@ -1,0 +1,62 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/employeeStyle.css" />
+<div class="empOuterDiv">
+  <div class="empInnerDiv">
+    <table>
+      <caption>
+        Employees
+      </caption>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Admin</th>
+        <th>Action</th>
+        <th>Delete</th>
+      </tr>
+      <% for(e of employees){%>
+      <form action="/updateemployee/<%= e.id %>" method="post">
+        <tr>
+          <td>
+            <label name="name" for="empName-<%= e.id %>" class="editOff"
+              ><%= e.name %></label
+            >
+            <input
+              id="empName-<%= e.id %>"
+              class="editOn"
+              type="text"
+              value="<%= e.name %>"
+              name="name"
+            />
+          </td>
+          <td>
+            <span><%= e.email %></span>
+          </td>
+          <td>
+            <label name="isAdmin" for="empIsAdmin-<%= e.id %>" class="editOff"
+              ><%= e.isAdmin %></label
+            >
+            <select
+              id="empIsAdmin-<%= e.id %>"
+              class="editOn"
+              name="isAdmin"
+              id=""
+            >
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </td>
+          <td>
+            <input class="editOff edit" type="button" value="Edit" />
+            <button type="submit" class="editOn">Save</button>
+        </td>
+    </form>
+          <td>
+            <a href="/deleteEmployee/<%= e.id %>"><button>Delete</button></a>
+            </td>
+        </tr>
+      <%}%>
+    </table>
+  </div>
+</div>
+
+<script src="../js/employee.js"></script>

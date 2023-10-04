@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../css/common.css" />
+
+<div class="commonOuterContainer">
+  <div class="commonInnerContainer">
+    <div class="heading">Sign-Up</div>
+    <form action="/createNewEmployee" method="post" class="content">
+      <div>
+        <label for="signUp_name">Name</label>
+        <input id="signUp_name" name="name" type="text" required />
+      </div>
+      <div>
+        <label for="signUp_email">Email</label>
+        <input id="signUp_email" name="email" type="email" required />
+      </div>
+      <div>
+        <label for="signUp_password">Password</label>
+        <input id="signUp_password" name="password" type="password" required />
+      </div>
+      <div>
+        <label for="signUp_confirmPassword">Confirm Password</label>
+        <input
+          id="signUp_confirmPassword"
+          name="confirm_password"
+          type="password"
+          required
+        />
+      </div>
+      <div class="empAdmin">
+        <label for="isAdmin">Employee/Admin</label>
+        <select id="isAdmin" name="isAdmin" id="signUp_select" required>
+          <option value="false">Employee</option>
+          <option value="true">Admin</option>
+        </select>
+      </div>
+
+      <div class="btnAndSignIn_up">
+        <button class="submitBTN" type="submit">Submit</button>
+
+        <span class="signIn_up">
+          Go back to <a href="/signin">Sign-in</a> page
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
