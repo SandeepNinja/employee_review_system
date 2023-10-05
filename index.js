@@ -2,6 +2,8 @@ const express = require("express");
 const port = 8000;
 const cookieParser = require("cookie-parser");
 const app = express();
+require("dotenv").config();
+
 const path = require("path");
 const expressLayouts = require("express-ejs-layouts");
 const db = require("./config/mongoose");
@@ -30,8 +32,8 @@ app.set("layout extractScripts", true);
 app.use(express.static("./assets"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-const URL =
-  "mongodb+srv://codewithsandeep140:aEA9Ae4EFGvY1tvB@codewithsandeep.k2kfyxa.mongodb.net/?retryWrites=true&w=majority";
+
+const URL = process.env.MONGODB_URL;
 app.use(
   session({
     name: "reviewSystem",
@@ -44,7 +46,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl: URL,
+        mongoUrl: process.env.MONGODB_URL,
         autoRemove: "disabled",
       },
       function (err) {
