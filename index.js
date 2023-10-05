@@ -33,7 +33,6 @@ app.use(express.static("./assets"));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-const URL = process.env.MONGODB_URL;
 app.use(
   session({
     name: "reviewSystem",
